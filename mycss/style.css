@@ -1,0 +1,157 @@
+﻿html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+}
+
+
+
+/*Navbar*/
+.nav-a-border {
+	border: 3px solid white;
+}
+
+.nav-a-margin {
+	margin-top: 0px;
+	margin-right: 20px;
+}
+
+@media screen 
+  and (min-device-height: 0px)
+  and (max-device-height: 748px) {
+    .nav-top-margin1{
+  margin-bottom: 5vh;
+    }
+}
+
+@media screen 
+  and (min-device-height: 748px)
+  and (max-device-height: 960px) {
+    .nav-top-margin2{
+  margin-bottom: 5vh;
+    }
+}
+
+@media screen 
+  and (min-device-height: 960px)
+  and (max-device-height: 1080px) {
+    .nav-top-margin3{
+  margin-bottom: 6vh;
+    }
+}
+
+@media screen 
+  and (min-device-height: 1080px)
+  and (max-device-height: 1320px) {
+    .nav-top-margin4{
+  margin-bottom: 7vh;
+    }
+}
+
+@media screen 
+  and (min-device-height: 1320px) {
+    .nav-top-margin5{
+  margin-bottom: 8vh;
+    }
+}
+
+.nav-top-margin{
+  margin-bottom: 7vh;
+}
+
+.nav-bottom-a-margin {
+  margin-top: 0px;
+  margin-right: 20px;
+}
+
+
+/*dropdown*/
+
+
+/*showTable*/
+
+
+
+
+/*Body*/
+
+
+/*dropdown*/
+.div-container-height1{
+  height: 80vh;
+}
+
+
+/*showTable*/
+.div-container-height2{
+  /*margin-top: 4vh;*/
+  height: 70vh;
+}
+
+
+/*Table*/
+
+.table-box-sm-y-scroll{
+  
+  overflow-y: scroll;
+}
+
+.div-table{
+  padding-bottom: 58px;
+}
+/*
+@media screen 
+  and (max-device-width: 370px) {
+    .table-box-sm-x-scroll{
+    overflow-y: scroll;
+    overflow-x: scroll;
+    height: 560px;
+    }
+}
+
+@media screen 
+  and (min-device-width: 576px)
+  and (max-device-width: 720px) {
+    .table-box-md{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 560px;
+    }
+}*/
+
+
+/*NavBarBottom*/
+.nav-link-bottom-margin {
+  margin-left: -32px;
+  margin-top: 2px;
+}
+
+
+thead tr th { 
+  background:#f8f9fa;
+  box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.4);
+  position: sticky; 
+  top: 0;
+}
+
+
+/*Trennlinie Stand 26.06: Nicht mehr benötigt; */
+hr { 
+    width: 100%; 
+    height: 1px; 
+    color: black;
+    background: black;
+}
+
+.hr-margin {
+	margin-bottom: 20px;
+}
+
+@media screen and (min-width: 575px) {
+  div.hr-hide {
+    display: none;
+  }
+}
+
