@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
   <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" rel="stylesheet">
-  <link rel="stylesheet" href="http://localhost/FC/mycss/style.css">
+  <link rel="stylesheet" href="../Kistenliste/mycss/style.css">
   <title>FC Stahl Kistenliste</title>
   
 </head>
@@ -15,12 +15,13 @@
 <body class="bg-light">
   <!-- DBConnection -->
   <?php 
-  require ("../FC/DBConnection/connection.php");
+  require ("../Kistenliste/connection.php");
+  
   ?>
 
   <!-- Navbar -->
   <?php
-  include ("../FC/template/header.html");
+  include ("../Kistenliste/template/header.html");
   ?>
 
   <!-- Container -->
@@ -31,7 +32,7 @@
           <div class="form-group">
             <?php
 
-              $sql="select Trikotnummer, Name, ID from tbl_spieler order by Name";
+              $sql="select Trikotnummer, Name, ID from mg_kl_spieler order by Name";
               $stmt = $conn->query($sql);
 
             print("<table> <thead> <tr> <th> Name </th> <th> Trikotnummer </th> </thead>");
@@ -59,7 +60,7 @@
 
             <?php
              
-            $sql = "select ID, Trikotnummer, Name from tbl_spieler order by Trikotnummer";
+            $sql = "select ID, Trikotnummer, Name from mg_kl_spieler order by Trikotnummer";
             foreach ($conn->query($sql) as $row) {
               $Spieler_ID = $row['ID'];
               $Trikotnummer = $row['Trikotnummer'];
@@ -85,7 +86,7 @@
       error_reporting(E_ALL);
       ini_set('display_errors', '1');
 
-      $sql = "select ID, Trikotnummer, Name, Vorname from tbl_spieler order by Trikotnummer";
+      $sql = "select ID, Trikotnummer, Name, Vorname from mg_kl_spieler order by Trikotnummer";
       print "<table class='table table-sm table-hover table-dark'><tr><th scope='col'>ID</th><th scope='col'>Trikotnummer</th><th scope='col'>Name</th><th scope='col'>Vorname</th></tr>\n";
       foreach ($conn->query($sql, PDO::FETCH_ASSOC) as $row) {
         print "<tr>";
@@ -104,7 +105,7 @@
 
 <!-- Footer -->
   <?php 
-  include ("../FC/template/footer.html");
+  include ("../Kistenliste/template/footer.html");
   ?>
 
 </body>
